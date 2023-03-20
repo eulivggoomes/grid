@@ -9,8 +9,8 @@ width: 95vw;
 background-color: antiquewhite;
 margin: 0 auto;
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 15vw 70vw 15vw;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: 100px 500px 100px;
 }
 
 header , nav , article , footer {
@@ -24,19 +24,27 @@ justify-content: center;
 
 header {
     background-color: blue;
-    grid-column: 3 span;
+   grid-column-start: 13;
+   grid-column-end: 1;
 }
-
 nav {
     background-color: blueviolet;
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 article {
     background-color: cornflowerblue;
-    grid-column: 2 span;
+    grid-column-start: 9;        
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 footer {
     background-color: aqua;
-    grid-column: 3 span;
+   grid-column-start: 13 ;
+   grid-column-end: 1;
 }

@@ -11,6 +11,12 @@ margin: 0 auto;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 15vw 70vw 15vw;
+grid-template-areas:
+"h h h"
+"m c c"
+"f f f"
+ ;
+ grid-gap: 10px;
 }
 
 header , nav , article , footer {
@@ -24,19 +30,22 @@ justify-content: center;
 
 header {
     background-color: blue;
-    grid-column: 3 span;
+    grid-area: h;
+   
 }
-
 nav {
     background-color: blueviolet;
+    grid-area: m;
+   
 }
 
 article {
     background-color: cornflowerblue;
-    grid-column: 2 span;
+    grid-area: c;
+
 }
 
 footer {
     background-color: aqua;
-    grid-column: 3 span;
+    grid-area: f;
 }
